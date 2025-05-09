@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Realizar Matrícula</title>
+</head>
+<body>
+    <h1>Realizar Matrícula na Creche: {{ creche.nome }}</h1>
+
+    {% if matriculas %}
+        <h2>Você já tem as seguintes matrículas ativas:</h2>
+        <ul>
+            {% for matricula in matriculas %}
+                <li>{{ matricula.nome_crianca }} - {{ matricula.creche.nome }} (Data de Entrada: {{ matricula.data_entrada }})</li>
+            {% endfor %}
+        </ul>
+    {% endif %}
+
+    <h2>Formulário de Matrícula</h2>
+    
+    <form method="POST">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Matricular</button>
+    </form>
+
+    {% if form.errors %}
+        <div style="color: red;">
+            <p>Por favor, corrija os erros abaixo:</p>
+            {{ form.errors }}
+        </div>
+    {% endif %}
+</body>
+</html>

@@ -1,0 +1,8 @@
+<h2>Creches Disponíveis</h2>
+<ul>
+    {% for creche in creches %}
+        <li>{{ creche.nome }} - Vagas: {{ creche.vagas_disponiveis }}
+            <a href="{% url 'fazer_matricula' creche.id %}">Matricular</a>
+        </li>
+    {% endfor %}
+</ul>

@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistema de Matrículas - Santo André</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+    <!-- Cabeçalho -->
+    <header>
+        <div class="logo">
+            <img src="../img/Logo.png" alt="Logo Prefeitura de Santo André">
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#inicio">Início</a></li>
+                <li><a href="#sobre">Sobre</a></li>
+                <li><a href="#creches">Creches</a></li>
+                <li><a href="#contato">Contato</a></li>
+                <li><a href="login.html">Login</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Seção Início -->
+    <section class="banner" id="inicio">
+        <h1>Bem-vindo ao Sistema de Matrículas de Santo André</h1>
+        <p>Acesse e matricule seu filho na escola mais próxima.</p>
+        <a href="matricula.html" class="btn-primary">Matricule agora</a>
+    </section>
+
+    <!-- Seção Sobre -->
+    <section class="sobre" id="sobre">
+        <h2>Sobre o Projeto</h2>
+        <p>Este sistema foi desenvolvido para facilitar o processo de matrícula das crianças nas escolas e creches de Santo André.</p>
+        <p>Aqui, os pais podem acessar as vagas disponíveis e realizar o cadastro online, de forma rápida e segura.</p>
+    </section>
+
+    <!-- Seção Como Funciona -->
+    <section class="como-funciona" id="como-funciona">
+        <h2>Como Funciona</h2>
+        <ul>
+            <li><strong>Passo 1:</strong> Acesse o sistema e faça seu login ou cadastre-se.</li>
+            <li><strong>Passo 2:</strong> Preencha as informações do seu filho.</li>
+            <li><strong>Passo 3:</strong> Selecione a escola ou creche e a vaga disponível.</li>
+            <li><strong>Passo 4:</strong> Finalize a matrícula.</li>
+        </ul>
+    </section>
+
+    <!-- Avisos Importantes -->
+    <section class="avisos">
+        <h2>Avisos Importantes</h2>
+        <p><strong>Matrículas para 2025 abertas!</strong> O prazo é até 30 de abril.</p>
+    </section>  
+
+    <!-- Seção de Creches -->
+    <section class="creches" id="creches">
+        <h2>Creches Disponíveis</h2>
+        <input type="text" placeholder="Pesquise por creche ou bairro" id="pesquisa-creche">
+        <button class="btn-secondary">Buscar</button>
+        <div class="escolas">
+            <p>Creche 1 - Vagas Disponíveis</p>
+            <p>Creche 2 - Vagas Disponíveis</p>
+            <p>Creche 3 - Vagas Esgotadas</p>
+        </div>
+    </section>
+
+    <!-- Seção de Contato -->
+    <section class="contato" id="contato">
+        <h2>Contato</h2>
+        <p>Se você tiver alguma dúvida ou precisar de ajuda, entre em contato conosco:</p>
+
+        <!-- Informações de contato (Telefone e E-mail) -->
+        <div class="informacoes-contato">
+            <p><strong>Email:</strong> contato@santoandre.sp.gov.br</p>
+            <p><strong>Telefone:</strong> (11) 1234-5678</p>
+        </div>
+
+        <!-- Formulário de Contato -->
+        <form action="https://formspree.io/f/mayadwkv" method="POST">
+            <div class="form-group">
+                <label for="nome">Nome:</label>
+                <input type="text" id="nome" name="nome" required>
+            </div>
+            <div class="form-group">
+                <label for="email">E-mail:</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+                <label for="mensagem">Mensagem:</label>
+                <textarea id="mensagem" name="mensagem" rows="4" required></textarea>
+            </div>
+            <button type="submit" class="btn-primary">Enviar Mensagem</button>
+        </form>
+    </section>
+
+    <!-- Rodapé -->
+    <footer>
+        <div class="footer-links">
+            <a href="#">Política de Privacidade</a>
+            <a href="#">Termos de Uso</a>
+            <a href="#">Suporte Técnico</a>
+        </div>
+        <p>&copy; 2025 Prefeitura de Santo André</p>
+    </footer>
+
+    <script>
+        // Função para rolagem suave ao clicar nos links de navegação
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener("click", function (e) {
+                e.preventDefault();
+
+                document.querySelector(this.getAttribute("href")).scrollIntoView({
+                    behavior: "smooth"
+                });
+            });
+        });
+    </script>
+
+</body>
+</html>

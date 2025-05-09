@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Fazer Matrícula - Portal Santo André</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f9f9f9;
+    }
+
+    header {
+      background-color: #003366;
+      padding: 15px;
+      color: white;
+      text-align: center;
+    }
+
+    main {
+      max-width: 800px;
+      margin: 30px auto;
+      background-color: #fff;
+      padding: 30px;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+
+    h1 {
+      color: #003366;
+      margin-bottom: 20px;
+    }
+
+    .form-group {
+      margin-bottom: 15px;
+    }
+
+    label {
+      display: block;
+      font-weight: bold;
+      margin-bottom: 5px;
+    }
+
+    input[type="text"],
+    input[type="email"],
+    input[type="date"],
+    textarea,
+    select {
+      width: 100%;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+
+    button {
+      background-color: #0078D4;
+      color: white;
+      border: none;
+      padding: 12px 20px;
+      font-size: 16px;
+      border-radius: 4px;
+      cursor: pointer;
+      margin-top: 10px;
+    }
+
+    button:hover {
+      background-color: #005fa3;
+    }
+
+    footer {
+      text-align: center;
+      padding: 15px;
+      background-color: #f1f1f1;
+      color: #555;
+      font-size: 14px;
+      margin-top: 30px;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h2>Portal de Matrículas - Prefeitura de Santo André</h2>
+  </header>
+
+  <main>
+    <h1>Formulário de Matrícula</h1>
+    <form action="#" method="post">
+      <div class="form-group">
+        <label for="nomeCrianca">Nome completo da criança</label>
+        <input type="text" id="nomeCrianca" name="nomeCrianca" required />
+      </div>
+
+      <div class="form-group">
+        <label for="dataNascimento">Data de nascimento</label>
+        <input type="date" id="dataNascimento" name="dataNascimento" required />
+      </div>
+
+      <div class="form-group">
+        <label for="nomeResponsavel">Nome do responsável</label>
+        <input type="text" id="nomeResponsavel" name="nomeResponsavel" required />
+      </div>
+
+      <div class="form-group">
+        <label for="cpf">CPF do responsável</label>
+        <input type="text" id="cpf" name="cpf" placeholder="000.000.000-00" required />
+      </div>
+
+      <div class="form-group">
+        <label for="email">E-mail para contato</label>
+        <input type="email" id="email" name="email" required />
+      </div>
+
+      <div class="form-group">
+        <label for="endereco">Endereço completo</label>
+        <textarea id="endereco" name="endereco" rows="3" required></textarea>
+      </div>
+
+      <div class="form-group">
+        <label for="creche">Creche desejada</label>
+        <select id="creche" name="creche" required>
+          <option value="">Selecione...</option>
+          <option value="creche1">Creche Crime</option>
+          <option value="creche2">Creche Organizado</option>
+          <option value="creche3">Creche de São Paulo</option>
+        </select>
+      </div>
+
+      <button type="submit">Enviar Matrícula</button>
+    </form>
+  </main>
+
+  <footer>
+    &copy; 2025 Prefeitura de Santo André - Todos os direitos reservados
+  </footer>
+
+</body>
+</html>
